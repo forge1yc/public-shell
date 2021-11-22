@@ -31,8 +31,8 @@ source ~/{你的配置文件}
 
 ## best wishes!
 
----
 author：forege1yc
+
 email: houyichaochao@gmail.com
 
 
