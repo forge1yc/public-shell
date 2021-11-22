@@ -9,8 +9,7 @@
 
 dir=`pwd`
 
-
-
+# 检测或创建sf目标文件夹
 if [ -e sf ]
         then
             echo "默认指定的 sf 目录存在"
@@ -29,6 +28,7 @@ tmpdes="${dir}/$2"
 chmod +x ${src}
 echo "success make $src +x"
 
+# 检查是否是同名文件
 if [ ${src} == ${tmpdes} ]; then
     echo "error src name and des name can not same"
     exit 1
@@ -39,7 +39,7 @@ des="${dir}/sf/$2"
 echo "src: ${src}"
 echo "des: ${des}"
 
-
+# 创建软连接 
 errOut=`ln -sf $src $des`
 if [ -e "No such file or directory" ]
     then
@@ -47,6 +47,7 @@ if [ -e "No such file or directory" ]
         exit 1
 fi
 
+# 创建成功
 echo "success create soft link: $src -> $des"
 
 
