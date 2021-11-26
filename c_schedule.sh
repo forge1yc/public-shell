@@ -13,7 +13,8 @@ cmd=$1
 
 while :
 do 
-    $(cmd)
+    # 这样的方法可以执行自定义的命令
+    sh ${cmd}
     sleep 1s
     echo 
 done
