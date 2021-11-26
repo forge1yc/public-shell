@@ -14,7 +14,7 @@ cmd=$1
 while :
 do 
     # 这样的方法可以执行自定义的命令
-    sh ${cmd}
+    bash ${cmd}
     sleep 1s
     echo 
 done
