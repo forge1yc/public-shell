@@ -11,11 +11,13 @@
 # 获取命令名字
 cmd=$1
 
+duration=$2
+
 while :
 do 
     # 这样的方法可以执行自定义的命令
     bash ${cmd}
-    sleep 1s
+    sleep ${duration}s
     echo 
 done
 
