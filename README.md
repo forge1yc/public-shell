@@ -10,6 +10,7 @@ pwd 命令，获得当前路径 current_dir
 编写你的脚本 xxx.sh，然后运行以下命令:
 
 soft.sh soft.sh soft
+
 soft xxx.sh xxx
 
 ## step3
