@@ -22,7 +22,9 @@ if [ -e sf ]
 fi
 
 src="${dir}/$1"
-tmpdes="${dir}/$2"
+remove_src_dot_name=$(echo $1 | cut -d'.' -f1)
+echo "remove_src_dot_name ${remove_src_dot_name}"
+tmpdes="${dir}/${remove_src_dot_name}"
 
 # 设置可执行
 chmod +x ${src}
@@ -34,7 +36,7 @@ if [ ${src} == ${tmpdes} ]; then
     exit 1
 fi
 
-des="${dir}/sf/$2"
+des="${dir}/sf/${remove_src_dot_name}"
 
 echo "src: ${src}"
 echo "des: ${des}"
