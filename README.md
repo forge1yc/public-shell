@@ -19,6 +19,7 @@ source ~/{你的配置文件}
 运行一下指令：
 
 chmod +x soft.sh
+
 ./soft.sh soft.sh soft
 
 ## step4
