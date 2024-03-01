@@ -20,7 +20,7 @@
 
 > chmod +x soft.sh
 
-> ./soft.sh soft.sh soft
+> ./soft.sh soft.sh
 
 ## step4
 
