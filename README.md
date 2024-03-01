@@ -36,7 +36,7 @@
 
 祝生活愉快！ 
 
-## backup：
+## Backup
 脚本内容不定期更新，都是自己日常用到的，如果有需要，可以提issues，或者一起完善public-shell
 
 ## best wishes!
