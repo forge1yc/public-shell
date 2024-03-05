@@ -13,7 +13,9 @@
 
 添加完毕之后，运行:
 
-> source ~/{你的配置文件}
+> source ~/{.bash_profile、.zshrc等等}
+
+使用zsh需要将 source .bash_profile 放到你的.zshrc 最后一行，其他终端遵循相同操作。
 
 ## step3
 运行一下指令：
