@@ -1,4 +1,4 @@
 #软连接忽略
 sf
 *.swp
-Map Remote.xml
+remote.xml
