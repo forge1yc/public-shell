@@ -21,6 +21,7 @@ then
     # Debian/Ubuntu 系统：sudo apt-get install xmlstarlet
     # Red Hat/CentOS 系统：sudo yum install xmlstarlet
     # macOS（通过 Homebrew）：brew install xmlstarlet
+    # remote.xml must in current folder
     PORT=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$PROJECT')]]" -v "destLocation/port" -n remote.xml)
 
     if [[ -z $PORT ]]; then
