@@ -14,6 +14,8 @@ TYPE=$(gum choose "run" "feat" "amend" "fix")
 current_dir=$(pwd)
 PROJECT=$(echo "$current_dir" | rev | cut -d'/' -f1 | rev)
 
+# pwd 获取
+REMOTE_XML_FULL_PATH="remote.xml"
 
 # Commit these changes
 if [ $TYPE = "run" ]
@@ -22,7 +24,7 @@ then
     # Red Hat/CentOS 系统：sudo yum install xmlstarlet
     # macOS（通过 Homebrew）：brew install xmlstarlet
     # remote.xml must in current folder
-    PORT=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$PROJECT')]]" -v "destLocation/port" -n remote.xml)
+    PORT=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$PROJECT')]]" -v "destLocation/port" -n $REMOTE_XML_FULL_PATH)
 
     if [[ -z $PORT ]]; then
         echo "PROJECT $PROJECT MATCH PORT NOT FOUND，CHECK PORJECT, EXIT!"
