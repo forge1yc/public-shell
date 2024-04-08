@@ -26,6 +26,7 @@ then
     # remote.xml must in current folder
     PORT=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$PROJECT')]]" -v "destLocation/port" -n $REMOTE_XML_FULL_PATH)
 
+    # 多值换行符分隔，只取第一个
     PORT=$(echo "$PORT" | awk 'NR==1') 
 
     if [[ -z $PORT ]]; then
