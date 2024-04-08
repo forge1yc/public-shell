@@ -6,9 +6,9 @@
  # Last modified: 2021-11-22 11:04:42
 #########################################################################
 #!/bin/bash
-echo "hello world"
+# echo "hello world"
 
-current_folder="cloud-ram-widget-permission"
+# current_folder="cloud-ram-widget-permission"
 # sed -nE '/<sourceLocation>.*'$current_folder'.*<\/sourceLocation>/{n;n;n;s/[^0-9]//gp}' remote.xml
 
 # sed -nE '/<sourceLocation>.*'$current_folder'.*<\/sourceLocation>/{n;n;n;s/[^0-9]//gp}' remote.xml
@@ -24,7 +24,16 @@ current_folder="cloud-ram-widget-permission"
 # port=$(awk -F'[<>]' -v folder="$current_folder" '$2 == "sourceLocation" && $6 ~ folder {getline; getline; if ($2 == "port") print $3}' remote.xml)
 
 
-port=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$current_folder')]]" -v "destLocation/port" -n remote.xml)
+# port=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$current_folder')]]" -v "destLocation/port" -n remote.xml)
 
 
-echo "Port found: $port"
+# echo "Port found: $port"
+
+
+# 假设变量line包含了您的字符串
+line="3200 3200"
+
+# 使用awk打印第一个数字
+new_line=$(echo "$line" | awk '{print $1}')
+
+echo $new_line
