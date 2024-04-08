@@ -26,7 +26,7 @@ then
     # remote.xml must in current folder
     PORT=$(xmlstarlet sel -t -m "//mapMapping[sourceLocation/path[contains(.,'$PROJECT')]]" -v "destLocation/port" -n $REMOTE_XML_FULL_PATH)
 
-    PORT=$(echo "$PORT" | awk '{print $1}')
+    PORT=$(echo "$PORT" | awk 'NR==1') 
 
     if [[ -z $PORT ]]; then
         echo "PROJECT $PROJECT MATCH PORT NOT FOUND，CHECK PORJECT, EXIT!"
@@ -34,6 +34,7 @@ then
     else
         echo "PORT: $PORT"
     fi
+    echo "$PROJECT && npm run start -- --port $PORT" 
     echo $PROJECT && npm run start -- --port $PORT
 
 elif [ $TYPE = "amend" ]

@@ -33,7 +33,10 @@
 # 假设变量line包含了您的字符串
 line="3200 3200"
 
+ echo "PORT: $line"
 # 使用awk打印第一个数字
 new_line=$(echo "$line" | awk '{print $1}')
+
+ echo "PORT: $new_line"
 
 echo $new_line
