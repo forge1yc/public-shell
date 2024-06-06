@@ -2,3 +2,4 @@
 sf
 *.swp
 remote.xml
+config_only_not_push
